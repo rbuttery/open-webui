@@ -27,6 +27,8 @@ RUN npm ci
 
 COPY . .
 ENV APP_BUILD_HASH=${BUILD_HASH}
+# Increase memory limit for Node.js to 8GB
+ENV NODE_OPTIONS="--max-old-space-size=8192"
 RUN npm run build
 
 ######## WebUI backend ########
