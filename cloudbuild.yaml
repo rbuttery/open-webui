@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+    # Request more memory for this build step
+    memory: '8GB'
